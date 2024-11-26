@@ -1,2 +1,63 @@
-using System;
-Console.WriteLine("Hallo!");
+using System.Drawing;
+using System.Windows.Forms;
+
+Form scherm = new Form();
+scherm.Text = "Mandelbrot";
+scherm.ClientSize = new Size(400, 600);
+
+
+Label tekstx = new Label();
+TextBox invoerx = new TextBox();
+Label teksty = new Label();
+TextBox invoery = new TextBox();
+Label straal = new Label();
+TextBox straaltekst = new TextBox();
+Label maxaantal = new Label();
+TextBox maxaantaltekst = new TextBox();
+Button knop = new Button();
+
+
+
+scherm.Controls.Add(tekstx);
+scherm.Controls.Add(invoerx);
+scherm.Controls.Add(teksty);
+scherm.Controls.Add(invoery);
+scherm.Controls.Add(straal);
+scherm.Controls.Add(straaltekst);
+scherm.Controls.Add(maxaantal);
+scherm.Controls.Add(maxaantaltekst);
+scherm.Controls.Add(knop);
+
+
+tekstx.Location = new Point (10, 10);
+invoerx.Location = new Point (80, 10);
+teksty.Location = new Point(10, 40);
+invoery.Location = new Point(80, 40);
+straal.Location = new Point(10, 70);
+straaltekst.Location = new Point(80, 70);
+maxaantal.Location = new Point(10, 100);
+maxaantaltekst.Location = new Point(80, 100);
+knop.Location = new Point(170, 100);
+
+
+tekstx.Size = new Size(70, 20);
+invoerx.Size = new Size(80, 20);
+teksty.Size = new Size(70, 20);
+invoery.Size = new Size(80, 20);
+straal.Size = new Size(70, 20);
+straaltekst.Size = new Size(80, 20);
+maxaantal.Size = new Size(70, 20);
+maxaantaltekst.Size = new Size(80, 20);
+knop.Size = new Size(90, 20);
+
+
+
+
+tekstx.Text = "Midden X:";
+teksty.Text = "Midden Y:";
+straal.Text = "Straal:";
+maxaantal.Text = "Max aantal:";
+knop.Text = "Maak plaatje!";
+
+
+Application.Run(scherm);
