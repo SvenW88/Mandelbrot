@@ -1,0 +1,28 @@
+using System.Drawing;
+using System.Windows.Forms;
+
+Form scherm = new Form
+{
+    Text = "Mandelbrot",
+    ClientSize = new Size(400, 600)
+};
+
+// Controls aanmaken
+Label middenx = new Label { Text = "Midden X:", Location = new Point(10, 10), Size = new Size(70, 20) };
+TextBox invoerx = new TextBox { Location = new Point(80, 10), Size = new Size(80, 20) };
+
+Label middeny = new Label { Text = "Midden Y:", Location = new Point(10, 40), Size = new Size(70, 20) };
+TextBox invoery = new TextBox { Location = new Point(80, 40), Size = new Size(80, 20) };
+
+Label straal = new Label { Text = "Straal:", Location = new Point(10, 70), Size = new Size(70, 20) };
+TextBox straaltekst = new TextBox { Location = new Point(80, 70), Size = new Size(80, 20) };
+
+Label maxaantal = new Label { Text = "Max aantal:", Location = new Point(10, 100), Size = new Size(70, 20) };
+TextBox maxaantaltekst = new TextBox { Location = new Point(80, 100), Size = new Size(80, 20) };
+
+Button knop = new Button { Text = "Maak plaatje!", Location = new Point(170, 100), Size = new Size(90, 20) };
+
+// Controls toevoegen aan form
+scherm.Controls.AddRange(new Control[] { middenx, invoerx, middeny, invoery, straal, straaltekst, maxaantal, maxaantaltekst, knop });
+
+Application.Run(scherm);
